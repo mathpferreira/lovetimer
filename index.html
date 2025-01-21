@@ -1,17 +1,66 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<!-- Mirrored from relashionshiptime-beertonis-projects.vercel.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Jan 2025 01:24:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="HTTrack is an easy-to-use website mirror utility. It allows you to download a World Wide website from the Internet to a local directory, building recursively all structures, getting html, images, and other files from the server to your computer. Links are rebuilt relatively so that you can freely browse to the local site (works with any browser). You can mirror several sites together so that you can jump from one to another. You can, also, update an existing mirror site, or resume an interrupted download. The robot is fully configurable, with an integrated help." />
-    <meta name="keywords" content="httrack, HTTRACK, HTTrack, winhttrack, WINHTTRACK, WinHTTrack, offline browser, web mirror utility, aspirateur web, surf offline, web capture, www mirror utility, browse offline, local site builder, website mirroring, aspirateur www, internet grabber, capture de site web, internet tool, hors connexion, unix, dos, windows 95, windows 98, solaris, ibm580, AIX 4.0, HTS, HTGet, web aspirator, web aspirateur, libre, GPL, GNU, free software" />
-    <title>Luana e Matheus</title>
-
-    <!-- Redirecionamento instantâneo para o seu site -->
-    <meta http-equiv="refresh" content="0; url=https://mathpferreira.github.io/lovetimer/relashionshiptime-beertonis-projects.vercel.app/index.html" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matheus e Luana</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3789/3789838.png" type="image/png">
+	<link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3789/3789838.png" type="img/x-icon">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <!-- Tela Inicial -->
+    <div class="container" id="home-screen">
+        <div class="couple-image">
+            <img src="https://media.lordicon.com/icons/wired/gradient/630-couple-man-woman.gif" alt="Imagem do casal">
+        </div>
+        <h1>Matheus e Luana</h1>
+        <button onclick="showCounter()">Tempo Juntos 💍</button>
+        <button onclick="showHowMutchTime()">A quanto tempo nos conhecemos ⏱️</button>
+    </div>
+
+    <!-- Tela do Contador de quanto tempo estamos juntos -->
+    <div class="container" id="counter-screen" style="display: none;">
+        <!-- Botão de voltar -->
+        <div class="back-button-container">        
+            <button class="back-button" onclick="goHome()">&#8592;</button>
+        </div>
+        <h1>Matheus e Luana</h1>
+        <p>Estamos juntos há:</p>
+        <div id="time-display">
+            <div class="time-unit"><span id="years">0</span> anos</div>
+            <div class="time-unit"><span id="months">0</span> meses</div>
+            <div class="time-unit"><span id="days">0</span> dias</div>
+            <div class="time-unit"><span id="hours">0</span> horas</div>
+            <div class="time-unit"><span id="minutes">0</span> minutos</div>
+            <div class="time-unit"><span id="seconds">0</span> segundos</div>
+        </div>
+    </div>
+
+    <!-- Tela do Contador de quanto tempo nos conhecemos -->
+    <div class="container" id="how-mutch-time-screen" style="display: none;">
+        <!-- Botão de voltar -->
+        <div class="back-button-container">        
+            <button class="back-button" onclick="goHome()">&#8592;</button>
+        </div>
+        <h1>Matheus e Luana</h1>
+        <p>nos conhecemos há:</p>
+        <div id="time-display">
+            <div class="time-unit"><span id="years-mt">0</span> anos</div>
+            <div class="time-unit"><span id="months-mt">0</span> meses</div>
+            <div class="time-unit"><span id="days-mt">0</span> dias</div>
+            <div class="time-unit"><span id="hours-mt">0</span> horas</div>
+            <div class="time-unit"><span id="minutes-mt">0</span> minutos</div>
+            <div class="time-unit"><span id="seconds-mt">0</span> segundos</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="../cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 </body>
 
+<!-- Mirrored from relashionshiptime-beertonis-projects.vercel.app/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Jan 2025 01:24:52 GMT -->
 </html>
