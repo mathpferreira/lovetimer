@@ -1,0 +1,187 @@
+/* Define a exibição centralizada do conteúdo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #5783fcf5, #e2398e);
+    color: #333;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Estilos para o contêiner principal */
+.container {
+    text-align: center;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Mais sombra para profundidade */
+    border-radius: 15px; /* Borda mais arredondada para efeito de profundidade */
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.loaded .container {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra mais forte ao aparecer */
+}
+
+/* Efeito de profundidade ao passar o mouse sobre o card */
+.container:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Sombra mais forte ao interagir */
+    transform: translateY(-5px); /* Card levanta um pouco */
+}
+
+/* Título principal */
+h1 {
+    color: #e2398e;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+p {
+    font-family: 'Thonburi';
+    color: #666;
+}
+
+/* Estilos dos botões principais */
+button {
+    background-color: #e2398e;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.2s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #8d1350;
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Estilos para o display do tempo */
+#time-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.time-unit {
+    font-size: 1.5em;
+    color: #8d1350;
+    font-weight: bold;
+    margin: 10px 0;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Animação para os contadores (efeito de cascata) */
+.time-unit span {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Efeito de cascata */
+.time-unit span:nth-child(1) {
+    animation: cascade 0.6s ease-out forwards;
+}
+.time-unit span:nth-child(2) {
+    animation: cascade 0.7s ease-out forwards;
+}
+.time-unit span:nth-child(3) {
+    animation: cascade 0.8s ease-out forwards;
+}
+.time-unit span:nth-child(4) {
+    animation: cascade 0.9s ease-out forwards;
+}
+.time-unit span:nth-child(5) {
+    animation: cascade 1s ease-out forwards;
+}
+.time-unit span:nth-child(6) {
+    animation: cascade 1.1s ease-out forwards;
+}
+
+/* Define o efeito de cascata */
+@keyframes cascade {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Botão de voltar com seta alinhado no canto superior esquerdo */
+.back-button {
+    width: 20%;
+    background: none;
+    border: none;
+    color: #ff7e79;
+    font-size: 1.5em;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.back-button-container {
+    text-align: left;
+}
+
+.back-button:hover {
+    color: #ff5e5c;
+}
+
+/* Estilos para as imagens SVG */
+.baby-image, .couple-image {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.baby-image img, .couple-image img {
+    max-width: 40%;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .back-button {
+        font-size: 1.2em;
+    }
+
+    .time-unit {
+        font-size: 1.2em;
+    }
+}
